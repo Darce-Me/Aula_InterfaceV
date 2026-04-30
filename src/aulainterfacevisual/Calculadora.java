@@ -1,15 +1,12 @@
-
 package aulainterfacevisual;
 
+public class Calculadora extends javax.swing.JFrame {
 
-public class Form1 extends javax.swing.JFrame {
-    
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Form1.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Calculadora.class.getName());
 
-    public Form1() {
+    public Calculadora() {
         initComponents();
     }
-
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -24,8 +21,12 @@ public class Form1 extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         txf_result = new javax.swing.JTextField();
         jb_calSum = new javax.swing.JButton();
+        jb_calSub = new javax.swing.JButton();
+        jb_calMult = new javax.swing.JButton();
+        jb_calDiv = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Super Calculadora");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -54,24 +55,28 @@ public class Form1 extends javax.swing.JFrame {
         jb_calSum.setText("Somar");
         jb_calSum.addActionListener(this::jb_calSumActionPerformed);
 
+        jb_calSub.setText("Subtrair");
+        jb_calSub.addActionListener(this::jb_calSubActionPerformed);
+
+        jb_calMult.setText("Multiplicar");
+        jb_calMult.addActionListener(this::jb_calMultActionPerformed);
+
+        jb_calDiv.setText("Dividir");
+        jb_calDiv.addActionListener(this::jb_calDivActionPerformed);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(43, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabel4)
-                            .addGap(18, 18, 18)
-                            .addComponent(txf_result, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(27, 27, 27))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                            .addComponent(jb_calSum)
-                            .addGap(111, 111, 111)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txf_result, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel1)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
@@ -81,8 +86,18 @@ public class Form1 extends javax.swing.JFrame {
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                     .addComponent(jLabel3)
                                     .addGap(18, 18, 18)
-                                    .addComponent(txf_num2, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(38, 38, 38))))
+                                    .addComponent(txf_num2, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addComponent(jb_calSum)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jb_calSub)
+                        .addGap(12, 12, 12)
+                        .addComponent(jb_calMult)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jb_calDiv)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addGap(20, 20, 20))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -98,12 +113,16 @@ public class Form1 extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(txf_num2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jb_calSum)
-                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jb_calSum)
+                    .addComponent(jb_calSub)
+                    .addComponent(jb_calMult)
+                    .addComponent(jb_calDiv))
+                .addGap(68, 68, 68)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(txf_result, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -124,16 +143,16 @@ public class Form1 extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jb_calSumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_calSumActionPerformed
 
-        
         double n1 = Double.parseDouble(txf_num1.getText());
         double n2 = Double.parseDouble(txf_num2.getText());
-        
-        double resultD = n1+n2;
-        
+
+        double resultD = n1 + n2;
+
         txf_result.setText(String.valueOf(resultD));
     }//GEN-LAST:event_jb_calSumActionPerformed
 
@@ -149,6 +168,32 @@ public class Form1 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txf_num1ActionPerformed
 
+    private void jb_calSubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_calSubActionPerformed
+        double n1 = Double.parseDouble(txf_num1.getText());
+        double n2 = Double.parseDouble(txf_num2.getText());
+
+        double resultD = n1 - n2;
+
+        txf_result.setText(String.valueOf(resultD));
+    }//GEN-LAST:event_jb_calSubActionPerformed
+
+    private void jb_calMultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_calMultActionPerformed
+        double n1 = Double.parseDouble(txf_num1.getText());
+        double n2 = Double.parseDouble(txf_num2.getText());
+
+        double resultD = n1 * n2;
+
+        txf_result.setText(String.valueOf(resultD));
+    }//GEN-LAST:event_jb_calMultActionPerformed
+
+    private void jb_calDivActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_calDivActionPerformed
+        double n1 = Double.parseDouble(txf_num1.getText());
+        double n2 = Double.parseDouble(txf_num2.getText());
+
+        double resultD = n1 / n2;
+
+        txf_result.setText(String.valueOf(resultD));
+    }//GEN-LAST:event_jb_calDivActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -169,7 +214,7 @@ public class Form1 extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new Form1().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new Calculadora().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -178,6 +223,9 @@ public class Form1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton jb_calDiv;
+    private javax.swing.JButton jb_calMult;
+    private javax.swing.JButton jb_calSub;
     private javax.swing.JButton jb_calSum;
     private javax.swing.JTextField txf_num1;
     private javax.swing.JTextField txf_num2;
