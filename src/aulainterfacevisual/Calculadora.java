@@ -146,6 +146,7 @@ public class Calculadora extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+
     private void jb_calSumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_calSumActionPerformed
 
         double n1 = Double.parseDouble(txf_num1.getText());
