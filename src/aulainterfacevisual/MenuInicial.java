@@ -21,6 +21,7 @@ public class MenuInicial extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
 
@@ -52,6 +53,9 @@ public class MenuInicial extends javax.swing.JFrame {
         jMenuItem3.setText("ComboBox");
         jMenuItem3.addActionListener(this::jMenuItem3ActionPerformed);
         jMenu1.add(jMenuItem3);
+
+        jMenuItem4.setText("Peso por Planeta");
+        jMenu1.add(jMenuItem4);
 
         jMenuBar1.add(jMenu1);
 
@@ -120,6 +124,7 @@ public class MenuInicial extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
