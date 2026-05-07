@@ -20,6 +20,7 @@ public class MenuInicial extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
 
@@ -46,8 +47,11 @@ public class MenuInicial extends javax.swing.JFrame {
         jMenu1.add(jMenuItem1);
 
         jMenuItem2.setText("Triangulo");
-        jMenuItem2.addActionListener(this::jMenuItem2ActionPerformed);
         jMenu1.add(jMenuItem2);
+
+        jMenuItem3.setText("ComboBox");
+        jMenuItem3.addActionListener(this::jMenuItem3ActionPerformed);
+        jMenu1.add(jMenuItem3);
 
         jMenuBar1.add(jMenu1);
 
@@ -85,10 +89,10 @@ public class MenuInicial extends javax.swing.JFrame {
         calc.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        Triangulo tria = new Triangulo();
-        tria.setVisible(true);
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        Exemplo_ComboBox comb = new Exemplo_ComboBox();
+        comb.setVisible(true);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     public static void main(String args[]) {
 
@@ -115,6 +119,7 @@ public class MenuInicial extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
