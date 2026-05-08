@@ -28,7 +28,9 @@ public class Jokenpo extends javax.swing.JFrame {
         jl_resultado = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 204, 255));
 
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -95,10 +97,13 @@ public class Jokenpo extends javax.swing.JFrame {
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
+        jPanel2.setBackground(new java.awt.Color(204, 153, 255));
+
         jb_confirmacao.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jb_confirmacao.setText("Pronto");
         jb_confirmacao.addActionListener(this::jb_confirmacaoActionPerformed);
 
+        jl_resultado.setBackground(new java.awt.Color(204, 204, 255));
         jl_resultado.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jl_resultado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jl_resultado.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
