@@ -48,11 +48,11 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jl_pesoPlaneta" max="32767" attributes="0"/>
-                      <Component id="txf_Peso" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jl_pesoPlaneta" min="-2" max="-2" attributes="0"/>
+                      <Component id="txf_Peso" min="-2" pref="155" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="19" max="32767" attributes="0"/>
+                  <EmptySpace pref="48" max="32767" attributes="0"/>
                   <Component id="cb_Planetas" min="-2" pref="116" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
               </Group>
@@ -93,7 +93,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Peso no planeta Merc&#xfa;rio(Kg):"/>
+            <Property name="text" type="java.lang.String" value="Peso na Terra (Kg):"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txf_Peso">

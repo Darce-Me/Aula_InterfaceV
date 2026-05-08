@@ -114,7 +114,7 @@ public class Peso_PorPlaneta extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jl_pesoPlaneta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jl_pesoPlaneta.setText("Peso no planeta Mercúrio(Kg):");
+        jl_pesoPlaneta.setText("Peso na Terra (Kg):");
 
         txf_Peso.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txf_Peso.addActionListener(this::txf_PesoActionPerformed);
@@ -136,10 +136,10 @@ public class Peso_PorPlaneta extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(44, 44, 44)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jl_pesoPlaneta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txf_Peso))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jl_pesoPlaneta)
+                    .addComponent(txf_Peso, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addComponent(cb_Planetas, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -192,10 +192,7 @@ public class Peso_PorPlaneta extends javax.swing.JFrame {
     }//GEN-LAST:event_txf_PesoActionPerformed
 
     private void cb_PlanetasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_PlanetasActionPerformed
-        //Altera o jLabel de peso
 
-        String planetas = cb_Planetas.getSelectedItem().toString();
-        jl_pesoPlaneta.setText("Peso no planeta " + planetas + "(Kg): ");
     }//GEN-LAST:event_cb_PlanetasActionPerformed
 
     private void jb_CalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_CalcularActionPerformed
