@@ -119,7 +119,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
                 .addComponent(ckb_ValeTransporte)
                 .addGap(18, 18, 18)
                 .addComponent(ckb_HomeOffice)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -175,9 +175,14 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         js_Experiencia.setPaintTicks(true);
         js_Experiencia.setSnapToTicks(true);
         js_Experiencia.setValue(5);
+        js_Experiencia.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                js_ExperienciaMouseReleased(evt);
+            }
+        });
 
         jl_Experiencia.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jl_Experiencia.setText("Experiência: "+js_Experiencia.getValue());
+        jl_Experiencia.setText("Experiência: 5");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -201,9 +206,9 @@ public class CadastroFuncionario extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jl_Experiencia)
-                .addGap(28, 28, 28)
+                .addGap(18, 18, 18)
                 .addComponent(js_Experiencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(68, 68, 68))
         );
@@ -273,6 +278,10 @@ public class CadastroFuncionario extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_jb_SalvarActionPerformed
+
+    private void js_ExperienciaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_js_ExperienciaMouseReleased
+        jl_Experiencia.setText("Experiência: "+js_Experiencia.getValue());
+    }//GEN-LAST:event_js_ExperienciaMouseReleased
     //Verificação e Mensagem
     public String msg_Beneficios() {
 
