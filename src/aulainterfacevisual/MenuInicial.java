@@ -23,6 +23,8 @@ public class MenuInicial extends javax.swing.JFrame {
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem7 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
 
@@ -62,6 +64,14 @@ public class MenuInicial extends javax.swing.JFrame {
         jMenuItem5.setText("JoKenPo");
         jMenuItem5.addActionListener(this::jMenuItem5ActionPerformed);
         jMenu1.add(jMenuItem5);
+
+        jMenuItem6.setText("Configurações do Jogo");
+        jMenuItem6.addActionListener(this::jMenuItem6ActionPerformed);
+        jMenu1.add(jMenuItem6);
+
+        jMenuItem7.setText("Cadastro de Funcionário");
+        jMenuItem7.addActionListener(this::jMenuItem7ActionPerformed);
+        jMenu1.add(jMenuItem7);
 
         jMenuBar1.add(jMenu1);
 
@@ -114,6 +124,16 @@ public class MenuInicial extends javax.swing.JFrame {
         jok.setVisible(true);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        Config_Jogo config_jogo = new Config_Jogo();
+        config_jogo.setVisible(true);
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        CadastroFuncionario cadastroFun = new CadastroFuncionario();
+        cadastroFun.setVisible(true);
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
+
     public static void main(String args[]) {
 
 
@@ -142,6 +162,8 @@ public class MenuInicial extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
