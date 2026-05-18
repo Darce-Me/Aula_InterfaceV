@@ -25,6 +25,7 @@ public class MenuInicial extends javax.swing.JFrame {
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
 
@@ -72,6 +73,10 @@ public class MenuInicial extends javax.swing.JFrame {
         jMenuItem7.setText("Cadastro de Funcionário");
         jMenuItem7.addActionListener(this::jMenuItem7ActionPerformed);
         jMenu1.add(jMenuItem7);
+
+        jMenuItem8.setText("Calculadora Melhorada");
+        jMenuItem8.addActionListener(this::jMenuItem8ActionPerformed);
+        jMenu1.add(jMenuItem8);
 
         jMenuBar1.add(jMenu1);
 
@@ -134,6 +139,11 @@ public class MenuInicial extends javax.swing.JFrame {
         cadastroFun.setVisible(true);
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+        Calculadora_Funcional cal_fun = new Calculadora_Funcional();
+        cal_fun.setVisible(true);
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
+
     public static void main(String args[]) {
 
 
@@ -164,6 +174,7 @@ public class MenuInicial extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
